@@ -6,7 +6,7 @@ Write here your project description.
 ## Test Docker version
 Run `docker --version` and ensure that you have a supported version of Docker:
 ```
-$ docker --version
+$ sudo docker --version
 
 Docker version 17.12.0-ce, build c97c6d6
 ```
@@ -27,15 +27,25 @@ Storage Driver: overlay2
 ## Purging All Unused or Dangling Images, Containers, Volumes, and Networks
 Clear all images from Docker.
 ```
-$ docker system prune -a
+$ sudo docker system prune -a
 ```
 
 ## Running Tensorflow Image
 Pull Tensorflow image.
 ```
-$ docker pull tensorflow/tensorflow
+$ sudo docker pull tensorflow/tensorflow
 ```
 And run the image from local folder.
 ```
-$ sudo docker run -it -v "$(pwd)":/home -p 8888:8888 -e PASSWORD=gianlucay12 tensorflow/tensorflow /bin/bash
+$ sudo docker run -it -v "$(pwd)":/home -p 8888:8888 -e PASSWORD=gianlucay12 project/tensorflow:version1 /bin/bash
+```
+
+## Saving State of Image
+Get id of image.
+```
+sudo docker ps
+```
+And commit then.
+```
+docker commit 005ed5b9adf8 project/tensorflow:version
 ```
