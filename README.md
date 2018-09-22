@@ -37,5 +37,5 @@ $ docker pull tensorflow/tensorflow
 ```
 And run the image from local folder.
 ```
-$ sudo docker run -it -v "$(pwd)":/home/gianluca/Desktop -p 8888:8888 -e PASSWORD=gianlucay12 tensorflow/tensorflow /bin/bash
+$ sudo docker run -it -v "$(pwd)":/home -p 8888:8888 -e PASSWORD=gianlucay12 tensorflow/tensorflow /bin/bash
 ```
