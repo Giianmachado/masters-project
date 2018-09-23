@@ -4,5 +4,5 @@ Run the codes following the folders
     Will install dependencies of tensorflow.
 - `lumi-test-predict`
     Will install dependencies of luminoth.
-- `datasets`
+- `using-datasets`
     Will format and train new datasets with luminoth.
