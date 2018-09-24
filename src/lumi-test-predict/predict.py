@@ -12,4 +12,4 @@ image = Image.open(os.path.abspath('image.jpg')).convert('RGB')
 objects = network.predict_image(image)
 
 # log objects
-print json.dumps(objects, indent=4, sort_keys=True)
+print(json.dumps(objects, indent=4, sort_keys=True))
